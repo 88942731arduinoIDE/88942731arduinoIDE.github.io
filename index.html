@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>88942731arduinoIDE</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background: #f2f2f2;
+        }
+
+        header {
+            background: #ff9900;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        nav {
+            display: flex;
+            background: #333;
+        }
+
+            nav button {
+                flex: 1;
+                padding: 15px;
+                color: white;
+                background: #333;
+                border: 0;
+                cursor: pointer;
+                font-size: 16px;
+            }
+
+                nav button:hover {
+                    background: #555;
+                }
+
+
+        .page {
+            display: none;
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px #aaa;
+        }
+
+
+        .active {
+            display: block;
+        }
+
+
+        .box {
+            background: #fafafa;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 6px solid orange;
+            border-radius: 5px;
+        }
+
+
+        .file {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #eee;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+
+        .download {
+            background: #28a745;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+
+            .download:hover {
+                background: #1c7c32;
+            }
+
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #555;
+        }
+
+
+        @media(max-width:600px) {
+
+            .file {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <header>
+
+        <h1>88942731arduinoIDE</h1>
+
+        <p>暇だから作ったサイト</p>
+
+    </header>
+
+
+
+    <nav>
+
+        <button onclick="page('home')">
+            🏠 ホーム
+        </button>
+
+
+        <button onclick="page('download')">
+            📁 ダウンロード
+        </button>
+
+
+    </nav>
+
+
+
+
+    <div id="home" class="page active">
+
+
+        <h2>自己紹介</h2>
+
+
+        <div class="box">
+
+            こんにちは！<br>
+
+            Scratchで活動している<br>
+
+            <b>88942731arduinoIDE</b>です。<br><br>
+
+
+            ・スクラッチで宣伝OK<br>
+
+        </div>
+
+
+
+        <h2>活動</h2>
+
+
+        <div class="box">
+
+            🎮 Scratch作品制作<br>
+
+            💻 なんかのアプリ制作<br>
+
+            🚀 いろいろな実験中！
+
+        </div>
+
+
+
+        <h2>Scratch</h2>
+
+
+        <a href="https://scratch.mit.edu/users/88942731arduinoIDE/" target="_blank">
+
+            Scratchプロフィールを見る
+
+        </a>
+
+
+
+    </div>
+
+
+
+
+
+
+    <div id="download" class="page">
+
+
+        <h2>📁 ファイルダウンロード</h2>
+
+
+        <p>
+            公開ファイル一覧
+        </p>
+
+
+
+        <div id="fileList">
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+    <footer>
+
+        88942731arduinoIDE
+
+    </footer>
+
+
+
+
+
+    <script>
+
+
+        function page(name) {
+
+            document.querySelectorAll(".page")
+                .forEach(function (p) {
+
+                    p.classList.remove("active");
+
+                });
+
+
+            document.getElementById(name)
+                .classList.add("active");
+
+        }
+
+
+
+
+
+        // ============================
+        //ファイル
+        // ============================
+
+
+        const files = [
+
+
+            {
+                name: "ファイル破壊アプリ",
+
+                url: "https://88942731arduinoIDE.github.io/files/破壊.zip"
+
+            }
+
+
+
+        ];
+
+
+
+
+        // ============================
+        // 表示処理
+        // ============================
+
+
+        const list = document.getElementById("fileList");
+
+
+
+        files.forEach(function (file) {
+
+
+            let div = document.createElement("div");
+
+
+            div.className = "file";
+
+
+
+            div.innerHTML = `
+
+<span>
+📄 ${file.name}
+</span>
+
+
+<a class="download"
+href="${file.url}"
+download>
+
+ダウンロード
+
+</a>
+
+`;
+
+
+
+            list.appendChild(div);
+
+
+
+        });
+
+
+
+    </script>
+
+
+</body>
+</html>
