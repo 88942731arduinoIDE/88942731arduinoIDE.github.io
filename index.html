@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -26,20 +27,19 @@
             background: #333;
         }
 
-            nav button {
-                flex: 1;
-                padding: 15px;
-                color: white;
-                background: #333;
-                border: 0;
-                cursor: pointer;
-                font-size: 16px;
-            }
+        nav button {
+            flex: 1;
+            padding: 15px;
+            color: white;
+            background: #333;
+            border: 0;
+            cursor: pointer;
+            font-size: 16px;
+        }
 
-                nav button:hover {
-                    background: #555;
-                }
-
+        nav button:hover {
+            background: #555;
+        }
 
         .page {
             display: none;
@@ -51,11 +51,9 @@
             box-shadow: 0 0 10px #aaa;
         }
 
-
         .active {
             display: block;
         }
-
 
         .box {
             background: #fafafa;
@@ -64,7 +62,6 @@
             border-left: 6px solid orange;
             border-radius: 5px;
         }
-
 
         .file {
             display: flex;
@@ -76,7 +73,6 @@
             border-radius: 8px;
         }
 
-
         .download {
             background: #28a745;
             color: white;
@@ -85,11 +81,9 @@
             border-radius: 8px;
         }
 
-
-            .download:hover {
-                background: #1c7c32;
-            }
-
+        .download:hover {
+            background: #1c7c32;
+        }
 
         footer {
             text-align: center;
@@ -97,14 +91,19 @@
             color: #555;
         }
 
-
         @media(max-width:600px) {
+
+            nav {
+                flex-direction: column;
+            }
 
             .file {
                 flex-direction: column;
                 gap: 10px;
             }
+
         }
+
     </style>
 
 </head>
@@ -129,16 +128,22 @@
             🏠 ホーム
         </button>
 
-
         <button onclick="page('download')">
             📁 配布物
         </button>
 
+        <button onclick="page('nisekeikoku')">
+            ⚠️ 偽警告
+        </button>
 
     </nav>
 
 
 
+
+    <!-- =========================
+         ホーム
+    ========================== -->
 
     <div id="home" class="page active">
 
@@ -154,10 +159,9 @@
 
             <b>88942731arduinoIDE</b>です。<br><br>
 
-
             ・スクラッチで宣伝OK<br>
 
-            フォロよろ！<br>
+            フォロよろ！
 
         </div>
 
@@ -183,12 +187,15 @@
         <h2>Scratch</h2>
 
 
-        <a href="https://scratch.mit.edu/users/88942731arduinoIDE/" target="_blank">
+        <a
+            href="https://scratch.mit.edu/users/88942731arduinoIDE/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
 
             Scratchプロフィールを見る
 
         </a>
-
 
 
     </div>
@@ -196,7 +203,9 @@
 
 
 
-
+    <!-- =========================
+         配布物
+    ========================== -->
 
     <div id="download" class="page">
 
@@ -208,25 +217,91 @@
             公開配布物一覧
         </p>
 
-        <p>このファイルで何かの被害が出ても責任は取りません!</p>
-        <p>下の方が新しいファイル</p>
+        <p>
+            このファイルで何かの被害が出ても責任は取りません!
+        </p>
+
+        <p>
+            下の方が新しいファイルかもしれない
+        </p>
 
 
         <div id="fileList">
-            
-    <p style="margin-top:20px;">
-        <a href="https://download.microsoft.com/download/4/b/2/cd00d4ed-ebdd-49ee-8a33-eabc3d1030e3/NDP481-Web.exe" download>
-            アプリをうまく実行できない場合
-        </a>
-    </p>
-            
-        </div>
 
+
+            <p style="margin-top:20px;">
+
+                <a
+                    href="https://download.microsoft.com/download/4/b/2/cd00d4ed-ebdd-49ee-8a33-eabc3d1030e3/NDP481-Web.exe"
+                    download
+                >
+
+                    アプリをうまく実行できない場合
+
+                </a>
+
+            </p>
+
+
+        </div>
 
 
     </div>
 
 
+
+
+    <!-- =========================
+         偽警告
+    ========================== -->
+
+    <div id="nisekeikoku" class="page">
+
+
+        <h2>⚠️ 偽警告</h2>
+
+
+        <p>
+            偽警告一覧
+        </p>
+
+
+        <p>
+            この偽警告で何かの被害が出ても責任は取りません!
+        </p>
+
+
+        <p>
+            下の方が新しい偽警告かもしれない
+        </p>
+
+
+        <div id="fakeWarningList">
+
+
+            <div class="file">
+
+                <span>
+                    ⚠️ 偽警告
+                </span>
+
+
+                <a
+                    class="download"
+                    href="/偽警告.html"
+                >
+
+                    開く
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
 
 
 
@@ -240,9 +315,12 @@
 
 
 
-
     <script>
 
+
+        // ============================
+        // ページ切り替え
+        // ============================
 
         function page(name) {
 
@@ -254,43 +332,41 @@
                 });
 
 
-            document.getElementById(name)
-                .classList.add("active");
+            const target =
+                document.getElementById(name);
+
+
+            if (target) {
+
+                target.classList.add("active");
+
+            }
 
         }
 
 
 
 
-
         // ============================
-        //ファイル
+        // 配布ファイル
         // ============================
-
 
         const files = [
 
-
             {
                 name: "ファイル破壊アプリ",
-
                 url: "https://88942731arduinoIDE.github.io/破壊.zip"
-
             },
+
             {
                 name: "くそ迷惑アプリ",
-
                 url: "https://88942731arduinoIDE.github.io/迷惑アプリ.zip"
-
             },
+
             {
                 name: "バイナリファイル展開",
-
                 url: "https://88942731arduinoIDE.github.io/バイナリファイル展開.zip"
-
             }
-
-
 
         ];
 
@@ -298,49 +374,44 @@
 
 
         // ============================
-        // 表示処理
+        // 配布ファイル表示
         // ============================
 
-
-        const list = document.getElementById("fileList");
-
+        const fileList =
+            document.getElementById("fileList");
 
 
         files.forEach(function (file) {
 
 
-            let div = document.createElement("div");
+            const div =
+                document.createElement("div");
 
 
             div.className = "file";
 
 
-
             div.innerHTML = `
 
-<span>
-📄 ${file.name}
-</span>
+                <span>
+                    📄 ${file.name}
+                </span>
+
+                <a
+                    class="download"
+                    href="${file.url}"
+                    download
+                >
+                    ダウンロード
+                </a>
+
+            `;
 
 
-<a class="download"
-href="${file.url}"
-download>
-
-ダウンロード
-
-</a>
-
-`;
-
-
-
-            list.appendChild(div);
-
+            fileList.appendChild(div);
 
 
         });
-
 
 
     </script>
