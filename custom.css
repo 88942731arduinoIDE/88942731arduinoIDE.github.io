@@ -1,0 +1,139 @@
+/* -------------------------------------------------------------------------- /
+/ General & Body                                                                    */
+.cls_a1B2c3,
+body{
+  cursor:none!important;
+}
+.cls_d4E5f6,
+.cls_s6S7t8{
+  display:block;
+  position:absolute;
+}
+.cls_d4E5f6,
+.cls_s6S7t8,
+.cls_m2N3o4 img{
+  position:absolute;
+}
+body{
+  background-image:url("piche.jpg");
+  background-size:cover;
+  background-repeat:no-repeat;
+  width:100%;
+  height:100vh;
+  overflow:hidden;
+}
+/* -------------------------------------------------------------------------- /
+/ Blue support box (renamed from blue-box)                                         */
+.cls_s6S7t8{
+  top:6%; z-index:999; left:36%;
+  background:#1a73e8;
+  width:440px; text-align:left;
+  padding-top:4px; color:#fff;
+  padding-left:20px; padding-right:20px;
+  animation:4s infinite zoominoutsinglefeatured;
+  max-height:600px; font-size:13px;
+  border-radius:8px;
+  overflow:hidden;
+}
+.cls_s6S7t8 .cls_u9T0v1{
+  font-size:16px; margin:8px 0 5px;
+  padding:5px 10px; color:#fff!important; font-weight:700;
+}
+@keyframes zoominoutsinglefeatured{
+  0%,100%{transform:scale(1,1);}
+  50%{transform:scale(1.1,1.1);}
+}
+@keyframes zoomininsinglefeatured{
+  0%,100%{transform:scale(1,1);}
+  50%{transform:scale(1.1,1.1);}
+}
+/* -------------------------------------------------------------------------- /
+/ Main window (renamed from fwefwcwevwvwe)                                         */
+.cls_d4E5f6{
+  font-weight:700; padding:15px 30px;
+  min-height:300px; border-radius:10px;
+  border:1px solid #fff; width:620px; margin:0 auto;
+  background-color:#fff; z-index:9999999;
+  box-shadow:5px 5px 15px 5px rgba(0,0,0,.4);
+  top:27%; left:30%;
+  cursor:pointer;
+}
+.cls_k6L7m8,
+.cls_n9N0o1{
+  padding:10px 30px; text-align:center;
+}
+.cls_d4E5f6 .cls_p5Q6r7{
+  clear:both; padding-top:0;
+  font-size:14px; font-weight:600; text-align:center;
+}
+.cls_d4E5f6 .cls_m2N3o4,
+.cls_h3I4j5,
+.cls_y4Z5a6,
+.cls_n9N0o1,
+.cls_v1W2x3{
+  font-weight:700;
+}
+.cls_d4E5f6 .cls_j7J8k9{
+  border-bottom:1px solid #d6d5d5;
+}
+.cls_l0K1l2{display:inline-block;}   /* renamed cls_87jO4yz5lb */
+.cls_d4E5f6 .cls_m2N3o4{
+  float:right; font-size:1.5rem;
+  line-height:1; color:#000; text-shadow:0 1px 0 #fff;
+  opacity:.5;
+}
+.cls_m3M4n5{margin:0 7px 0 0; width:30px; height:30px;}
+.cls_m2N3o4 img{width:20px; top:27px; right:17px;}
+.cls_s8T9u0{margin:5px auto; display:block;}
+.cls_v1W2x3{margin:5px; font-size:17px; text-align:center;}
+.cls_y4Z5a6{font-size:17px; color:#1a73e8;}
+.cls_e0F1g2{
+  margin:12px 0; height:50px;
+  display:flex; border-top:1px solid #d6d5d5;
+}
+.cls_e0F1g2 .cls_m3M4n5{
+  margin-top:22px; height:27px;
+}
+.cls_e0F1g2 ul{list-style:none; margin-left:116px;margin-top: -15px;}
+.cls_e0F1g2 ul li{
+  display:inline-block; float:left;
+  padding-left:20px; margin-top:13px;
+}
+.cls_e0F1g2 ul li a{text-decoration:none;}
+.cls_h3I4j5{
+  font-size:18px; text-transform:capitalize;
+  position:relative; width:auto; top:21px; left:8px;
+}
+.cls_o6O7p8,
+.cls_y5Y6z7{
+  width:100%; position:absolute;
+}
+.cls_k6L7m8{
+  border-radius:4px; color:#000;
+  border:1px solid #000; background-color:transparent;
+  font-size:18px; font-weight:700; cursor:pointer;
+  width: 149px;
+}
+.cls_y5Y6z7{
+  bottom:0; z-index:999;
+  padding:10px 34px; min-height:81px;
+  cursor:none;
+  background: #1773e8;
+}
+.cls_g4H5i6{
+  height:100%; background-color:#000; opacity:.7;
+  transition:1s; top:0; cursor:none;
+}
+.cls_a8B9c0{font-size:20px;}
+.cls_a8B9c0 img{width:20px;}
+.cls_p3Q4r5{
+  padding: 13px 44px;
+  border-radius:5px;
+  background: #1773e8;
+  color: #FFF;
+  width: 150px;
+}
+.jMLDiSJaqj{
+  width: 38px;
+  margin-bottom:12px;
+}
