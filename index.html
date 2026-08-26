@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -121,7 +120,6 @@
     </header>
 
 
-
     <nav>
 
         <button onclick="page('home')">
@@ -139,17 +137,13 @@
     </nav>
 
 
-
-
     <!-- =========================
          ホーム
     ========================== -->
 
     <div id="home" class="page active">
 
-
         <h2>自己紹介</h2>
-
 
         <div class="box">
 
@@ -166,9 +160,7 @@
         </div>
 
 
-
         <h2>活動</h2>
-
 
         <div class="box">
 
@@ -183,9 +175,7 @@
         </div>
 
 
-
         <h2>Scratch</h2>
-
 
         <a
             href="https://scratch.mit.edu/users/88942731arduinoIDE/"
@@ -197,10 +187,7 @@
 
         </a>
 
-
     </div>
-
-
 
 
     <!-- =========================
@@ -209,9 +196,7 @@
 
     <div id="download" class="page">
 
-
         <h2>📁 配布物ダウンロード</h2>
-
 
         <p>
             公開配布物一覧
@@ -228,7 +213,6 @@
 
         <div id="fileList">
 
-
             <p style="margin-top:20px;">
 
                 <a
@@ -242,13 +226,9 @@
 
             </p>
 
-
         </div>
 
-
     </div>
-
-
 
 
     <!-- =========================
@@ -257,19 +237,15 @@
 
     <div id="nisekeikoku" class="page">
 
-
         <h2>⚠️ 偽警告</h2>
-
 
         <p>
             改造後偽警告一覧
         </p>
 
-
         <p>
             この偽警告で何かの被害が出ても責任は取りません!
         </p>
-
 
         <p>
             下の方が新しい偽警告かもしれない
@@ -278,32 +254,11 @@
 
         <div id="fakeWarningList">
 
-
-            <div class="file">
-
-                <span>
-                    ⚠️ 偽警告
-                </span>
-
-
-                <a
-                    class="download"
-                    href="/偽警告.html"
-                >
-
-                    開く
-
-                </a>
-
-            </div>
-
+            <!-- JavaScriptで自動表示 -->
 
         </div>
 
-
     </div>
-
-
 
 
     <footer>
@@ -313,10 +268,7 @@
     </footer>
 
 
-
-
     <script>
-
 
         // ============================
         // ページ切り替え
@@ -345,8 +297,6 @@
         }
 
 
-
-
         // ============================
         // 配布ファイル
         // ============================
@@ -371,8 +321,6 @@
         ];
 
 
-
-
         // ============================
         // 配布ファイル表示
         // ============================
@@ -382,7 +330,6 @@
 
 
         files.forEach(function (file) {
-
 
             const div =
                 document.createElement("div");
@@ -410,9 +357,73 @@
 
             fileList.appendChild(div);
 
-
         });
 
+
+        // ============================
+        // 偽警告一覧
+        // ============================
+
+        const fakeWarnings = [
+
+            {
+                name: "基本の偽警告",
+                url: "/偽警告.html"
+            },
+            {
+                name: "ショップイーズの偽警告",
+                url: "/偽警告2.html"
+            }
+
+            //ChatGPT
+            // 新しい偽警告を追加するときは
+            // 下のように追加してください。
+            //
+            // ,
+            // {
+            //     name: "偽警告2",
+            //     url: "/偽警告2.html"
+            // }
+
+        ];
+
+
+        // ============================
+        // 偽警告表示
+        // ============================
+
+        const fakeWarningList =
+            document.getElementById("fakeWarningList");
+
+
+        fakeWarnings.forEach(function (warning) {
+
+            const div =
+                document.createElement("div");
+
+
+            div.className = "file";
+
+
+            div.innerHTML = `
+
+                <span>
+                    ⚠️ ${warning.name}
+                </span>
+
+                <a
+                    class="download"
+                    href="${warning.url}"
+                >
+                    開く
+                </a>
+
+            `;
+
+
+            fakeWarningList.appendChild(div);
+
+        });
 
     </script>
 
