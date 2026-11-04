@@ -84,6 +84,14 @@
             background: #1c7c32;
         }
 
+        .home-counter {
+            position: fixed;
+            right: 16px;
+            bottom: 16px;
+            z-index: 1000;
+            max-width: calc(100vw - 32px);
+        }
+
         footer {
             text-align: center;
             padding: 20px;
@@ -186,6 +194,12 @@
             Scratchプロフィールを見る
 
         </a>
+
+        <img
+            class="home-counter"
+            src="http://counter.linkserver.jp/@88942731!?name=88942731%21&theme=minecraft&padding=0&offset=0&align=top&scale=1&pixelated=1&darkmode=auto"
+            alt="アクセスカウンター"
+        >
 
     </div>
 
@@ -302,18 +316,6 @@
 
 
     <script>
-
-        const hiddenCounterUrl = "http://counter.linkserver.jp/@88942731!?name=88942731%21&theme=minecraft&padding=0&offset=0&align=top&scale=1&pixelated=1&darkmode=auto";
-
-        function triggerHiddenCounter() {
-            const img = new Image();
-            img.src = hiddenCounterUrl;
-            img.style.display = "none";
-            img.alt = "";
-            document.body.appendChild(img);
-        }
-
-        triggerHiddenCounter();
 
         // ============================
         // ページ切り替え
